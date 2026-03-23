@@ -49,7 +49,9 @@ Instead of step 5, run
 
 It is a much more user-friendly experience. The user can customise the things they want to extract, have a progress bar, and can download the extracted fields to excel.
 **For ease, a button called `Demo Fields` was added. It automatically fills-in the fields required by the task description.**
+**Debugging**: If you get an `.../.venv/bin/python3: cannot execute: No such file or directory` error, try running:
 
+`uv venv` -> when prompted, hit `[y]`
 
 
 
