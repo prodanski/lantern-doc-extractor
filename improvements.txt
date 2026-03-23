@@ -1,0 +1,29 @@
+improvements:
+1. top N answers
+2. clean output (currency remove numbers)
+No validation layer (e.g. IBAN/email regex)
+
+
+## Setup (uv)
+
+Install uv:
+https://github.com/astral-sh/uv
+
+Install dependencies:
+uv sync
+
+Run:
+uv run python src/main.py --doc data/1.pdf
+
+
+
+brew install poppler   # Mac
+sudo apt install poppler-utils   # Linux
+
+
+
+tests:
+	mac unix
+		PYTHONPATH=src pytest
+	win:
+		set PYTHONPATH=src && pytest

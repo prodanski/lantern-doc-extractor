@@ -1,0 +1,21 @@
+{
+  "terms": {
+    "bank_account_name": ["applicant"],
+    "bank_account_number": ["bank", "iban", "account number", "account"],
+    "bank_sort_code": ["bank", "iban", "swift", "sort code"],
+    "bank_name": ["bank", "bank:", "building society"],
+    "commitment_amount": ["#num"],
+    "commitment_currency": ["euro", "eur", "gbp", "usd"],
+    "investor_email": ["@"]
+  },
+  "questions": {
+    "bank_account_name": "What is the name of the applicant?",
+    "bank_account_number": "What is the IBAN or account number?",
+    "bank_sort_code": "What is the sort code or SWIFT?",
+    "bank_name": "What is the bank name?",
+    "commitment_amount": "How much is the commitment ammount?",
+    "commitment_currency": "What is the commitment currency?",
+    "investor_email": "What is the investor email?"
+  },
+  "json_output_address": "outputs"
+}
