@@ -151,7 +151,7 @@ def update_progress(p):
 if uploaded_file is not None:
     st.success("File uploaded")
 
-    # save to temp file (your pipeline expects a path)
+    # save to temp file
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
         tmp.write(uploaded_file.read())
         tmp_path = tmp.name
@@ -180,11 +180,9 @@ if uploaded_file is not None:
         df = pd.DataFrame(formatted)
         st.dataframe(df)
 
-        # raw JSON (nice touch)
         with st.expander("Raw Output"):
             st.json(results)
 
-        # debug info (optional but useful signal)
         with st.expander("Page Map"):
             st.json(pages)
 
