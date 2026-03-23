@@ -1,10 +1,41 @@
-# Python-generated files
+# Python
 __pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+*.pyc
+*.pyo
+*.pyd
 
-# Virtual environments
-.venv
+# Virtual envs
+.venv/
+venv/
+
+# OS
+.DS_Store
+
+# Data (IMPORTANT - don't upload PDFs unless required)
+data/
+data_dev/
+
+# Outputs (you REQUIRE folder but not contents)
+outputs/*.json
+
+# Logs
+*.log
+
+# Streamlit cache
+.streamlit/
+
+# Huggingface cache (VERY IMPORTANT)
+.cache/
+**/huggingface/
+
+# Large model files (just in case)
+*.bin
+*.pt
+
+# Temporary files
+tmp/
+temp/
+
+# IDE
+.vscode/
+.idea/
