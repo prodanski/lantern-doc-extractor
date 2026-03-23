@@ -62,9 +62,6 @@ st.markdown("### How to use:")
 st.write("This is a small-LLM powered document extractor. For each thing you'd like to know add a field name below. Then write the question that would help the LLM extract what you're looking for.")
 st.markdown("Optionally, to speed things, you can add search terms. With these you help the model by telling it where to look first. \n Separate each term with a comma.")
 st.markdown("Type in _#num_ if you want the model to look for numbers.")
-progress_bar = st.progress(0)
-def update_progress(p):
-    progress_bar.progress(p)
 if "fields" not in st.session_state:
     st.session_state.fields = [
         {
@@ -148,7 +145,9 @@ if not questions:
 
 
 uploaded_file = st.file_uploader("Upload PDF", type=["pdf"])
-
+progress_bar = st.progress(0)
+def update_progress(p):
+    progress_bar.progress(p)
 if uploaded_file is not None:
     st.success("File uploaded")
 

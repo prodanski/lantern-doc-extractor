@@ -1,10 +1,8 @@
 import json
 import argparse
 from extractor import ask_doc_questions, save_results_to_json
-import tracemalloc
 
 def main():
-    tracemalloc.start()
     parser = argparse.ArgumentParser()
     parser.add_argument("--doc", required=True, help="Path to document")
     parser.add_argument("--config", default="config/extraction_config.json")
@@ -30,13 +28,6 @@ def main():
 
     print(json.dumps(results, indent=2))
     save_results_to_json(results, output_address)
-    current, peak = tracemalloc.get_traced_memory()
-    tracemalloc.stop()
-
-    print({
-        "current_mb": current / 1024**2,
-        "peak_mb": peak / 1024**2
-    })
 
 
 if __name__ == "__main__":
